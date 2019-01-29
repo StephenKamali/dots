@@ -1,0 +1,193 @@
+/**
+ * Rofi Theme
+ * Author: GarryMcGooble
+ */
+
+configuration {
+
+    // The display name of this browser
+    display-ssh:                   "  ";
+    // The display name of this browser
+    display-run:                    "  ";
+    // The display name of this browser
+    display-drun:                   "  ";
+    // The display name of this browser
+    display-window:                 "";
+    display-combi:                  "";
+    show-icons: true;
+}
+
+* {
+    //foreground:  #D3D3D3;
+    //foreground:  #c6c6c6;
+    //decorators: #FFFFFF;
+    foreground: #244896;
+    decorators: #4877da;
+    //decorators: #3367D6;
+    //decorators: #5e86df;
+    
+    // Blue
+    blue:      #7396e3;
+    lightblue: #ebf0fb;
+
+    transparent: rgba(0,0,0,0);
+    background-color:  transparent;
+    font: "FontAwesome 18";
+}
+
+#window {
+    location: center;
+    anchor:   center;
+    color: #FFFFFF;
+    background-color: @transparent;
+    spacing: 0;
+    //width: 40%;
+    //height: 34%;
+    width: 755px;
+    height: 361px;
+    children:  [vertb, mainbox];
+    orientation: horizontal;
+}
+
+#mainbox {
+    spacing: 0;
+    orientation: vertical;
+    children: [ inputbarcontainer, message, listviewbox, footerbox];
+}
+
+#message {
+    border-color: #FFFFFF;
+    border:  0px 2px 2px 2px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #FFFFFF;
+}
+
+#message {
+    font: "Sauce Code Powerline ExtraLight 8";
+    color: #FFFFFF;
+}
+
+#footerbox {
+    background-color:@decorators;
+    border: 1px 2px 2px 1px;
+    border-radius: 0px 0px 45px 45px;
+    border-color: @foreground;
+    spacing: 0;
+    padding: 15px 12px 6px 12px;
+    expand: false;
+}
+
+#inputbarcontainer {
+    background-color:@decorators;
+    border: 1px 2px 2px 1px;
+    //border: 1px;
+    border-radius: 45px 45px 0px 0px;
+    border-color: @foreground;
+    padding: 24px 24px 16px;
+    expand: false;
+    children: [inputbar];
+}
+
+#inputbar {
+    color: #545454;
+    padding: 8px;
+    background-color: #FAFAFA;
+    border: 2px 1px 1px 2px;
+    border-radius:  25px 25px 25px 25px;
+    border-color: @foreground;
+    font: "Noto Sans 12";
+}
+#entry,prompt,case-indicator {
+    text-font: inherit;
+    text-color:inherit;
+}
+
+#listviewbox {
+    padding: 0px 2px 0px 2px;
+    children: [listview];
+}
+
+#listview {
+    padding: 0px;
+    border-color: @foreground;
+    border: 0px 1px 0px 1px;
+    background-color: #F6F6FC;
+    dynamic: false;
+    fixed-height: true;
+    scrollbar: false;
+    layout: vertical;
+    lines: 3;
+}
+
+#element {
+    padding: 8px;
+    vertical-align: 0.5;
+    //horizontal-align: 0.5;
+    color: #2a2a2a;
+    font:"Noto Sans Light 24";
+}
+#element selected.normal {
+    background-color: @blue;
+    color: #FFFFFF;
+}
+#element normal active {
+    foreground: @lightblue;
+}
+#element normal urgent {
+
+}
+#element alternate normal {
+    background-color: #fbfcfe;
+}
+#element alternate active {
+    foreground: @lightblue;
+}
+#element alternate urgent {
+
+}
+#element selected active {
+    background-color: @blue;
+    color: #FFFFFF;
+}
+#element selected urgent {
+    background-color: @blue;
+    color: #FFFFFF;
+}
+#element normal normal {
+
+}
+
+#vertb {
+    expand: false;
+    children: [ dummy0, sidebar, dummy1  ];
+}
+
+#dummy0,  dummy1 {
+    expand: true;
+}
+
+#sidebar {
+    expand: false;
+    orientation: vertical;
+    spacing: 0px;
+    border: 0px 0px 0px 0px;
+}
+
+#button {
+    font: "FontAwesome 22";
+    padding: 6px;
+    border: 2px 0px 2px 2px;
+    border-radius: 4px 0px 0px 4px;
+    background-color: @tlightblack;
+    border-color: @foreground;
+    color: @foreground;
+    horizontal-align: 0.5;
+}
+#button selected normal {
+    color: @dark;
+    border: 2px 0px 2px 2px;
+    background-color: @backlight;
+    border-color: @foreground;
+}
+
